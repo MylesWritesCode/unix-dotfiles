@@ -5,3 +5,7 @@
 !fish/**/*
 !nvim
 !nvim/**/*
+!windows-terminal
+!windows-terminal/**/*
+!vs-code
+!vs-code/**/*
