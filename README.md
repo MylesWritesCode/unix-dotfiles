@@ -9,8 +9,8 @@ $ cd ~
 $ git clone git@github.com:MylesWritesCode/dotfiles.git 
 $ mv dotfiles/* ~/.config
 
-# From there, consult specific READMEs in their folders for config and
-# installation.
+# From there, consult specific READMEs in their folders for 
+# config and installation.
 ```
 
 ### Linux
