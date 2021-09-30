@@ -3,6 +3,8 @@
 !.gitignore
 !fish
 !fish/**/*
+!omf
+!omf/**/*
 !nvim
 !nvim/**/*
 !windows-terminal

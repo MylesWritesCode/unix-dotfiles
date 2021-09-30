@@ -16,6 +16,7 @@ $ mv dotfiles/* ~/.config
 ### Linux
 - nvim
 - fish
+  - oh-my-fish
 
 ### Windows
 Copy these settings to their respective programs in Windows
