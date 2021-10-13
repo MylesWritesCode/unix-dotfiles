@@ -8,4 +8,7 @@
 # fnm completions --shell fish
 #
 # References: https://github.com/Schniz/fnm
-fnm env | source
+
+if test -d ~/.fnm
+  fnm env | source
+end
