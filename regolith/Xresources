@@ -6,6 +6,10 @@ i3-wm.client.focused.color.border: #34ebc0
 i3-wm.client.focused.color.child_border: #f8f8f2  
 i3-wm.client.focused.color.indicator: #f92672
 
+!! Window Gaps
+i3-wm.gaps.outer.size: 4 
+i3-wm.gaps.inner.size: 24 
+
 !! Disable i3 and Regolith from setting wallpaper (i.e. let Gnome do it)
 gnome.wallpaper: ""
 

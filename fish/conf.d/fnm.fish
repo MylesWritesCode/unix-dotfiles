@@ -1,4 +1,3 @@
-# Instructions
 # To use fnm as the node version manager, first install it:
 # curl -fsSL https://fnm.vercel.app/install | bash
 #
@@ -8,8 +7,7 @@
 # Finally, add shell completions
 # fnm completions --shell fish
 #
-# References
-# https://github.com/Schniz/fnm
+# References: https://github.com/Schniz/fnm
 
 if test -d ~/.fnm
   fnm env | source

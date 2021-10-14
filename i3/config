@@ -168,6 +168,7 @@ bindsym $mod+$ws7_key workspace number $ws7
 bindsym $mod+$ws8_key workspace number $ws8
 bindsym $mod+$ws9_key workspace number $ws9
 bindsym $mod+$ws10_key workspace number $ws10
+
 ## Navigate // Workspace 11 - 19 // <><Ctrl> 1..9 ##
 bindsym $mod+Ctrl+$ws1_key workspace number $ws11
 bindsym $mod+Ctrl+$ws2_key workspace number $ws12
@@ -298,6 +299,7 @@ bindsym $mod+Shift+$ws7_key move container to workspace number $ws7
 bindsym $mod+Shift+$ws8_key move container to workspace number $ws8
 bindsym $mod+Shift+$ws9_key move container to workspace number $ws9
 bindsym $mod+Shift+$ws10_key move container to workspace number $ws10
+
 ## Modify // Move Window to Workspace 11 - 19// <><Ctrl><Shift> 1..9 ##
 bindsym $mod+Shift+Ctrl+$ws1_key move container to workspace number $ws11
 bindsym $mod+Shift+Ctrl+$ws2_key move container to workspace number $ws12
@@ -325,6 +327,7 @@ bindsym $mod+$alt+$ws7_key move container to workspace number $ws7; workspace nu
 bindsym $mod+$alt+$ws8_key move container to workspace number $ws8; workspace number $ws8
 bindsym $mod+$alt+$ws9_key move container to workspace number $ws9; workspace number $ws9
 bindsym $mod+$alt+$ws10_key move container to workspace number $ws10; workspace number $ws10
+
 ## Modify // Carry Window to Workspace 11 - 19 // <><Alt><Ctrl> 1..9 ##
 bindsym $mod+$alt+Ctrl+$ws1_key move container to workspace number $ws11; workspace number $ws11
 bindsym $mod+$alt+Ctrl+$ws2_key move container to workspace number $ws12; workspace number $ws12
