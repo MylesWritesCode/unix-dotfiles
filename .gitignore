@@ -1,6 +1,8 @@
 *
 !README.md
 !.gitignore
+!dunst
+!dunst/**/*
 !fish
 !fish/**/*
 !i3
