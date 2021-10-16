@@ -680,3 +680,6 @@ exec --no-startup-id $i3-wm.program.3
 
 # Launch Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh --blocks top &
+
+# Launch dunst
+# exec --no-startup-id dunst
