@@ -1,0 +1,90 @@
+{
+  "telemetry.enableTelemetry": false,
+  "editor.minimap.enabled": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.tabSize": 2,
+  "psi-header.config": {
+    "forceToTop": true,
+    "author": "Myles Berueda",
+    "initials": "MB",
+    "authorEmail": "myles.berueda@codemithril.com",
+    "company": "MylesWritesCode"
+  },
+  "psi-header.templates": [{
+      "language": "*",
+      "template": [
+        "File: <<filerelativepath>>",
+        "Created Date: <<filecreated('dddd MMMM Do YYYY')>>",
+        "Author: <<author>>",
+        "-----",
+        "Last Modified: <<filecreated('dddd MMMM Do YYYY h:mm:ss a')>>",
+        "-----",
+        "Copyright (c) <<year>> <<company>>",
+        "-----",
+        "HISTORY"
+      ],
+      "changeLogCaption": "HISTORY"
+    }
+  ],
+  "psi-header.lang-config": [{
+      "language": "GraphQL",
+      "begin": "###",
+      "prefix": "# ",
+      "end": "###",
+
+  }],
+  "psi-header.variables": [
+  ],
+  "psi-header.changes-tracking": {
+  },
+  "window.restoreWindows": "none",
+  "window.openFilesInNewWindow": "default",
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.fontFamily": "'Operator Mono Lig', 'CaskaydiaCove Nerd Font Mono', 'Fira Code', Consolas, monospace",
+  "editor.fontLigatures": true,
+  "editor.inlayHints.fontFamily": "'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.fontWeight": "normal",
+  "vscode_custom_css.imports": [
+      "file:///E:/VSCodeStyles/styles.css"
+  ],
+  "editor.fontSize": 16,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.vim",
+  "vscode-neovim.highlightGroups.highlights": {
+
+      "Directory": "vim",
+      "IncSearch": {
+          "backgroundColor": "theme.editor.findMatchBackground",
+          "borderColor": "theme.editor.findMatchBorder"
+      },
+      "Search": {
+          "backgroundColor": "theme.editor.findMatchHighlightBackground",
+          "borderColor": "theme.editor.findMatchHighlightBorder"
+      },
+      "Visual": {
+          "backgroundColor": "theme.editor.selectionBackground"
+      },
+      "Conceal": "vim",
+      "Substitute": "vim"
+  },
+  "vscode-neovim.neovimExecutablePaths.win32": "C:\\Neovim\\bin\\nvim.exe",
+  "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\Myles\\AppData\\Local\\nvim\\init.vim",
+  "vscode-neovim.useCtrlKeysForInsertMode": false,
+  "vscode-neovim.useWSL": true,
+  "editor.rulers": [
+      { "column":  80, "color": "#5a5a5a30" },
+      { "column": 120, "color": "#5a5a5a30" },
+  ],
+"editor.bracketPairColorization.enabled": true
+}
