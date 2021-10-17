@@ -1,2 +1,3 @@
-Set-PoshPrompt -Theme C:\Users\Myles\Documents\PowerShell\writescode.json
+# Place writescode.json into ~\Documents\Powershell
+Set-PoshPrompt -Theme $env:USERPROFILE\Documents\PowerShell\writescode.json
 
