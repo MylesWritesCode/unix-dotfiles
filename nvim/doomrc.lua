@@ -65,7 +65,7 @@ local doom = {
     -- "cpp",             -- C++ support
     -- "java",            -- Java support
 
-    -- "config",          -- Configuration files (JSON, YAML, TOML)
+    "config",             -- Configuration files (JSON, YAML, TOML)
     -- "dockerfile",      -- Do you like containers, right?
   },
   utilities = {
