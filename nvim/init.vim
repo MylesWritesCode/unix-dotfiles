@@ -9,5 +9,5 @@ source $HOME/.config/nvim/mappings/keymaps.vim
 
 """ VSCODE EXTENSIONS """
 if exists('g:vscode')
-  source $HOME/.config/nvim/vscode/settings.vim
+  source $HOME/.config/nvim/vs-code/settings.vim
 endif
