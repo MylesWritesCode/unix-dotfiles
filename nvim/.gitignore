@@ -1,0 +1,8 @@
+# Temp files
+plugin/
+sessions/
+undodir/
+
+# Backup files
+.doom_releases
+.doom_backup_hash
