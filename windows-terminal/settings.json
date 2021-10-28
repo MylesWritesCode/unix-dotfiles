@@ -99,7 +99,7 @@
                 "face": "CaskaydiaCove Nerd Font Mono",
                 "size": 10
             },
-            "padding": "5, 10, 5, 5",
+            "padding": "10, 15",
             "scrollbarState": "hidden",
             "useAcrylic": true
         },
