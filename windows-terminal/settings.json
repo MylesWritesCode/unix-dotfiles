@@ -13,7 +13,7 @@
                 "split": "horizontal",
                 "splitMode": "duplicate"
             },
-            "keys": "ctrl+shift+-"
+            "keys": "ctrl+shift+minus"
         },
         {
             "command": 
@@ -26,19 +26,18 @@
         {
             "command": 
             {
+                "action": "newTab"
+            },
+            "keys": "ctrl+shift+t"
+        },
+        {
+            "command": 
+            {
                 "action": "splitPane",
                 "split": "vertical",
                 "splitMode": "duplicate"
             },
             "keys": "ctrl+shift+plus"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "down"
-            },
-            "keys": "alt+j"
         },
         {
             "command": 
@@ -59,9 +58,10 @@
         {
             "command": 
             {
-                "action": "newTab"
+                "action": "moveFocus",
+                "direction": "down"
             },
-            "keys": "ctrl+shift+t"
+            "keys": "alt+j"
         },
         {
             "command": "toggleFocusMode",
@@ -86,86 +86,45 @@
     {
         "defaults": 
         {
+            "acrylicOpacity": 0.90000000000000002,
+            "bellStyle": 
+            [
+                "window",
+                "taskbar"
+            ],
             "colorScheme": "Dracula",
-            "padding": "15, 10",
-            "startingDirectory": "."
+            "cursorShape": "filledBox",
+            "font": 
+            {
+                "face": "CaskaydiaCove Nerd Font Mono",
+                "size": 10
+            },
+            "padding": "5, 10, 5, 5",
+            "scrollbarState": "hidden",
+            "useAcrylic": true
         },
         "list": 
         [
             {
-                "acrylicOpacity": 0.0,
-                "bellStyle": 
-                [
-                    "window",
-                    "taskbar"
-                ],
+                "altGrAliasing": false,
                 "cursorShape": "filledBox",
                 "font": 
                 {
-                    "face": "CaskaydiaCove Nerd Font Mono"
+                    "face": "CaskaydiaCove Nerd Font Mono",
+                    "size": 10,
+                    "weight": "normal"
                 },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
-                "scrollbarState": "hidden",
-                "source": "Windows.Terminal.PowershellCore",
-                "useAcrylic": false
+                "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "bellStyle": 
-                [
-                    "window",
-                    "taskbar"
-                ],
-                "font": 
-                {
-                    "face": "CaskaydiaCove Nerd Font Mono"
-                },
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
                 "name": "Ubuntu",
+                "padding": "15",
                 "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "bellStyle": 
-                [
-                    "window",
-                    "taskbar"
-                ],
-                "commandline": "powershell.exe",
-                "font": 
-                {
-                    "face": "CaskaydiaCove Nerd Font Mono"
-                },
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": true,
-                "name": "Windows PowerShell",
-                "scrollbarState": "hidden"
-            },
-            {
-                "bellStyle": 
-                [
-                    "window",
-                    "taskbar"
-                ],
-                "commandline": "cmd.exe",
-                "font": 
-                {
-                    "face": "CaskaydiaCove Nerd Font Mono"
-                },
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": true,
-                "name": "cmd"
-            },
-            {
-                "font": 
-                {
-                    "face": "CaskaydiaCove Nerd Font Mono"
-                },
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": true,
-                "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
             }
         ]
     },
@@ -633,6 +592,7 @@
         }
     ],
     "showTabsInTitlebar": true,
+    "showTerminalTitleInTitlebar": true,
     "tabSwitcherMode": "disabled",
     "tabWidthMode": "equal"
 }
