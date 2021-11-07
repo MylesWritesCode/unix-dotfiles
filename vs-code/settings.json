@@ -12,10 +12,12 @@
       "template": [
         "File: <<filerelativepath>>",
         "Project: <<projectname>>",
-        "Created Date: <<filecreated('dddd MMMM Do YYYY')>>",
-        "Author: <<author>>",
+        "Purpose: // TODO: Add the purpose of the file here.",
+        "", 
+        "@author <<author>>",
+        "@date   <<filecreated('dddd MMMM Do YYYY')>>",
         "-----",
-        "Last Modified: <<filecreated('dddd MMMM Do YYYY h:mm:ss a')>>",
+        "Modified: <<filecreated('dddd MMMM Do YYYY h:mm:ss a')>>",
         "-----",
         "Copyright (c) <<year>> <<company>>",
         "-----",
@@ -25,6 +27,12 @@
     }
   ],
   "psi-header.lang-config": [
+    {
+      "language": "*",
+      "begin": "/**",
+      "prefix": " * ",
+      "end": "**/"
+    },
     {
       "language": "GraphQL",
       "begin": "###",
@@ -36,6 +44,10 @@
       "begin": "###",
       "prefix": "# ",
       "end": "###"
+    },
+    {
+      "language": "rust",
+      "rootDirFileName": "Cargo.toml"
     }
   ],
   "psi-header.variables": [],
@@ -56,6 +68,10 @@
   ],
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorCustomizations": {
+    "editorIndentGuide.background": "#00000000",
+    "editorIndentGuide.activeBackground": "#444444b9"
+  },
   "window.zoomLevel": -1,
   "window.restoreWindows": "none",
   "window.openFilesInNewWindow": "default",
@@ -93,5 +109,14 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "codesnap.showWindowTitle": true,
+  "codesnap.transparentBackground": true,
+  "codesnap.boxShadow": "rgba(0, 0, 0, 0.55) 0px 5px 10px",
+  "codesnap.containerPadding": "1em",
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "C_Cpp.clang_format_fallbackStyle": "Google",
+  "C_Cpp.default.cppStandard": "c++20"
 }
