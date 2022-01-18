@@ -7,7 +7,7 @@
   "palette": {
     "primary": "#01579B",
     "secondary": "#49404F",
-    "error": "p:error",
+    "error": "#910000",
     "white": "#FFFFFF"
   },
   "blocks": [
@@ -164,9 +164,9 @@
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
           "foreground": "p:white",
-          "background": "#910000",
+          "background": "p:error",
           "properties": {
-            "prefix": "<transparent> !</> "
+            "prefix": " ! "
           }
         }
       ]
