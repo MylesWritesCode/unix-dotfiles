@@ -4,6 +4,11 @@
   "final_space": false,
   "console_title_style": "template",
   "console_title_template": "{{if .Root}} ⚡ {{end}}{{.Folder | replace \"~\" \"🏚\" }} @ {{.Host}}",
+  "palette": {
+    "primary": "#01579B",
+    "secondary": "#49404F",
+    "white": "#FFFFFF"
+  },
   "blocks": [
     {
       "type": "prompt",
@@ -12,16 +17,16 @@
         {
           "type": "os",
           "style": "diamond",
-          "leading_diamond": "<#49404F>┏</>",
-          "foreground": "#FFFFFF",
-          "background": "#49404F"
+          "leading_diamond": "<p:secondary>┏</>",
+          "foreground": "p:white",
+          "background": "p:secondary"
         },
         {
           "type": "path",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
-          "foreground": "#ffffff",
-          "background": "#01579B",
+          "foreground": "p:white",
+          "background": "p:primary",
           "properties": {
             "home_icon": "\uF7DB",
             "folder_icon": "\uF6D7",
@@ -34,7 +39,7 @@
           "type": "node",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
-          "foreground": "#ffffff",
+          "foreground": "p:white",
           "background": "#6CA35E",
           "properties": {
             "prefix": " \uF898 ",
@@ -45,7 +50,7 @@
           "type": "rust",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
-          "foreground": "#ffffff",
+          "foreground": "p:white",
           "background": "#DD3516",
           "properties": {
             "prefix": " \uE7A8 ",
@@ -91,7 +96,7 @@
           "type": "ruby",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
-          "foreground": "#ffffff",
+          "foreground": "p:white",
           "background": "#AE1401",
           "properties": {
             "prefix": " \uE791 ",
@@ -103,7 +108,7 @@
           "type": "azfunc",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
-          "foreground": "#ffffff",
+          "foreground": "p:white",
           "background": "#FEAC19",
           "properties": {
             "prefix": " \uf0e7",
@@ -115,7 +120,7 @@
           "type": "aws",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
-          "foreground": "#ffffff",
+          "foreground": "p:white",
           "background_templates": [
             "{{if contains \"default\" .Profile}}#FFA400{{end}}",
             "{{if contains \"jan\" .Profile}}#f1184c{{end}}"
@@ -145,7 +150,7 @@
           "type": "executiontime",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
-          "foreground": "#ffffff",
+          "foreground": "p:white",
           "background": "#49404f",
           "properties": {
             "threshold": 0,
@@ -157,7 +162,7 @@
           "type": "exit",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
-          "foreground": "#ffffff",
+          "foreground": "p:white",
           "background": "#910000",
           "properties": {
             "prefix": "<transparent> !</> "
@@ -173,8 +178,8 @@
           "type": "shell",
           "style": "diamond",
           "leading_diamond": "\uE0C5",
-          "foreground": "#FFFFFF",
-          "background": "#49404F",
+          "foreground": "p:white",
+          "background": "p:secondary",
           "properties": {
             "user_info_separator": "."
           }
@@ -184,7 +189,7 @@
           "style": "diamond",
           
           "foreground": "#3EC669",
-          "background": "#49404F",
+          "background": "p:secondary",
           "properties": {
             "prefix": "<transparent>\uE0BD </>",
             "time_format": "15:04:05"
@@ -200,8 +205,8 @@
         {
           "type": "text",
           "style": "diamond",
-          "leading_diamond": "<#49404F>┖</>",
-          "foreground": "#FFFFFF",
+          "leading_diamond": "<p:secondary>┖</>",
+          "foreground": "p:white",
           "background": "transparent",
           "properties": {
             "text": "\uF054_"
