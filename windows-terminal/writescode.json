@@ -164,7 +164,7 @@
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
           "foreground": "p:white",
-          "background": "p:error",
+          "background": "#910000",
           "properties": {
             "prefix": "<transparent> !</> "
           }
