@@ -33,6 +33,16 @@
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
   },
   {
+    "key": "shift+k",
+    "command": "editor.debug.action.showDebugHover",
+    "when": "editorTextFocus && inDebugMode && neovim.mode != insert"
+  },
+  {
+    "key": "shift+k",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus && neovim.mode != insert"
+  },
+  {
     "key": "ctrl+j",
     "command": "workbench.action.quickOpenNavigateNext",
     "when": "inQuickOpen"
