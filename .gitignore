@@ -20,3 +20,5 @@ fish/fish_variables
 !windows-terminal/**/*
 !vs-code
 !vs-code/**/*
+!iterm2
+!iterm2/**/*
