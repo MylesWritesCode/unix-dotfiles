@@ -1,13 +1,16 @@
 if status is-interactive
-  # Commands to run in interactive sessions can go here
+    # Commands to run in interactive sessions can go here
+    # fish_vi_key_bindings  # fish vi modes
+    function fish_mode_prompt; end
 end
 
-function fish_right_prompt
-  # Intentionally left blank; This is now being taken care of by oh-my-posh.
-end
+oh-my-posh init fish --config ~/.config/oh-my-posh/tomorrow-night-bright.json | source
 
-# Commands that will always be run, regardless of interactivity
-oh-my-posh --init --shell fish --config ~/.config/windows-terminal/writescode.json | source
-set -g theme_nerd_fonts yes
-set -g theme_color_scheme nord
-# set -g theme_color_scheme zenburn
+set -gx EDITOR nvim
+
+# pnpm
+set -gx PNPM_HOME "/home/myles/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end

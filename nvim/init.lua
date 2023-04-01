@@ -1,74 +1,50 @@
----[[---------------------------------------]]---
---      init.lua - Init file of Doom Nvim      --
---             Author: NTBBloodbath            --
---             License: GPLv2                  --
----[[---------------------------------------]]---
+-- Check if user is running Doom in a supported Neovim version before trying to load anything
+if vim.fn.has("nvim-0.7.0") ~= 1 then
+  local message = table.concat({
+    "You are using an unsupported version of Neovim.",
+    "",
+    "Doom nvim and many of its plugins require at least version 0.7.0 to work as expected.",
+    "Consider updating if you run into issues.",
+    "https://github.com/doom-neovim/doom-nvim/blob/main/docs/updating-neovim.md",
+  }, "\n")
+  vim.notify(message, vim.log.levels.ERROR)
+end
 
----- Doom Utilities -----------------------------
--------------------------------------------------
--- Store startup time in seconds
-vim.g.start_time = vim.fn.reltime()
+local profiler = require("doom.services.profiler")
+profiler.start("framework|init.lua")
 
--- Disable these for very fast startup time
-vim.cmd([[
-  syntax off
-  filetype off
-  filetype plugin indent off
-]])
+-- Preload lazy nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  print("Bootstrapping lazy.nvim, please wait...")
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
--- Temporarily disable shada file to improve performance
-vim.opt.shadafile = "NONE"
--- Disable some unused built-in Neovim plugins
-vim.g.loaded_gzip = false
-vim.g.loaded_netrwPlugin = false
-vim.g.loaded_tarPlugin = false
-vim.g.loaded_zipPlugin = false
-vim.g.loaded_2html_plugin = false
-vim.g.loaded_remote_plugins = false
+-- Makes sure ~/.local/share/nvim exists, to prevent problems with logging
+vim.fn.mkdir(vim.fn.stdpath("data"), "p")
 
----- Doom Configurations ------------------------
--------------------------------------------------
+-- Add ~/.local/share to runtimepath early, such that
+-- neovim autoloads plugin/packer_compiled.lua along with vimscript,
+-- before we start using the plugins it lazy-loads.
+vim.opt.runtimepath:append(vim.fn.stdpath("data"))
+
+-- Load the doom-nvim framework
+require("doom.core")
+
 vim.defer_fn(function()
-  local load_modules = require("doom.utils").load_modules
-
-  -- Load Doom stuff (core, modules, extras)
-  load_modules("doom", { "core", "modules", "extras.autocmds" })
-
-  -- If the dashboard plugin is already installed and the packer_compiled.lua
-  -- file exists so we can make sure that the dashboard have been loaded.
-  local doom_root, sep = require("doom.core.system").doom_root, require("doom.core.system").sep
-  local compiled_plugins_path = string.format(
-    "%s%splugin%spacker_compiled.lua",
-    doom_root,
-    sep,
-    sep
-  )
-  if require("doom.utils").file_exists(compiled_plugins_path) then
-    -- If the current buffer name is empty then trigger Dashboard.
-    -- NOTE: this is done to avoid some weird issues with Dashboard and
-    --       number / signcolumn when Dashboard gets triggered automatically
-    if (vim.api.nvim_buf_get_name(0):len() == 0) and packer_plugins["dashboard-nvim"] then
-      vim.cmd("Dashboard")
-    end
+  -- Check for updates
+  if doom.check_updates and doom.core.updater then
+    doom.core.updater.check_updates(true)
   end
+end, 1)
 
-  vim.opt.shadafile = ""
-  vim.cmd([[
-    rshada!
-    doautocmd BufRead
-    syntax on
-    filetype on
-    filetype plugin indent on
-    PackerLoad nvim-treesitter
-  ]])
 
-  -- Load keybindings module at the end because the keybindings module cost is high
-  vim.defer_fn(function()
-    load_modules("doom.extras", { "keybindings" })
-    if not require("doom.core.functions").is_plugin_disabled("which-key") then
-      vim.cmd([[
-        PackerLoad which-key.nvim
-      ]])
-    end
-  end, 20)
-end, 0)
+profiler.stop("framework|init.lua")

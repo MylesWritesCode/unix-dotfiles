@@ -13,11 +13,11 @@ and which code style you should use :heart:
 
 ## Where can I help
 
-- If you’ve encountered a bug, [file a bug report](https://github.com/NTBBloodbath/doom-nvim/issues/new/choose).
-- Check out our [issue tracker](https://github.com/NTBBloodbath/doom-nvim/issues)
+- If you’ve encountered a bug, [file a bug report](https://github.com/doom-neovim/doom-nvim/issues/new/choose).
+- Check out our [issue tracker](https://github.com/doom-neovim/doom-nvim/issues)
   for reported issues. If you find one that you have an answer for, that would
   be a great help!
-- Look for issues tagged [help wanted](https://github.com/NTBBloodbath/doom-nvim/labels/help%20wanted).
+- Look for issues tagged [help wanted](https://github.com/doom-neovim/doom-nvim/labels/help%20wanted).
   These tend to be a little (or a lot) harder, and are issues outside my own expertise.
 - If you are a Windows user and you are interested in contributing to Doom Nvim
   so that it works correctly on your environment, you can do it freely since I
@@ -31,6 +31,8 @@ time you checkout the `pull_request_branch`. This is because the pr branch most 
 will have less settings and plugins than you personal branch and therefore it will
 not work as expected otherwise. Eg. you will see 'Dashboard' text on vim load instead of
 'Doom'.
+
+> Alternatively you can setup an isolated dev environment for contributing using our docker image [here](../tools/README.md#doom-contrib-docker-image-start_dockersh).
 
 ## Reporting issues
 
@@ -50,7 +52,7 @@ thus reach a solution more quickly.
 Some important data would be:
 
 - Your custom configuration if you have one
-  (`doomrc.lua`, `doom_config.lua` and `plugins.lua`)
+  (`modules.lua` and `config.lua`)
 - Which branch of Doom Nvim are you using
 - Which plugins are you using
 
@@ -73,8 +75,8 @@ Doom Nvim follows some code style rules like ones the mentioned below:
 
 - Double quotes over single quotes.
 - Spaces over tabs.
-- Two spaces indentation
-- Variable names in `snake_case`
+- Two spaces indentation.
+- Variable names in `snake_case`.
 - Function names in `snake_case`.
 - [stylua] is used to format lua files with the following configuration:
 
@@ -98,9 +100,7 @@ quote_style = "AutoPreferDouble"
 
 #### Commits & PRs
 
-- Target `develop` instead of `main`.
-  The only exception are hotfixes (plugins breaking changes, Doom bugs)
-  and documentation improvements!
+- Target the `main` branch.
 
 #### Keybind conventions
 
@@ -116,3 +116,13 @@ your pull request :)
 [gist]: https://gist.github.com/
 [stylua]: https://github.com/JohnnyMorganz/StyLua
 [luacheck]:https://github.com/luarocks/luacheck
+
+### Tools
+
+A range of tools for contributors are currently housed in the `tools/` folder.
+Read the detailed [documentation](../tools/README.md).
+
+#### Notable Tools
+
+ - [`tools/start_docker.sh`](../tools/README.md#doom-contrib-docker-image-start_dockersh) Sets up a dev environment for contributing to doom-nvim.  Creates a git worktree to make changes and a docker image to test them within.
+
