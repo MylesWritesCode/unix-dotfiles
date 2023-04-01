@@ -22,3 +22,5 @@ fish/fish_variables
 !vs-code/**/*
 !iterm2
 !iterm2/**/*
+!zellij
+!zellij/**/*

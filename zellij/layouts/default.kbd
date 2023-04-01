@@ -1,0 +1,30 @@
+layout {
+    tab name="general" {
+	    pane size=1 borderless=true {
+	        plugin location="zellij:tab-bar"
+	    }
+	    pane
+	    pane size=2 borderless=true {
+	        plugin location="zellij:status-bar"
+	    }
+
+    }
+    tab name="servers" {
+	    pane size=1 borderless=true {
+	        plugin location="zellij:tab-bar"
+	    }
+	    pane
+	    pane
+	    pane size=2 borderless=true {
+	        plugin location="zellij:status-bar"
+	    }
+	    floating_panes {
+	        pane {
+	            x "5%"
+	            width "90%"
+	            height "50%"
+	        }
+
+	    }
+    }
+}
